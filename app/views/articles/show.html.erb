@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-8 col-sm-offset-2">
+        <article>
+          <h2>
+          <%= @article.title %>
+          <%= link_to 'edit', edit_article_path %>
+          <%= link_to 'delete', article_path(@article), method: :delete %>
+          </h2>
+
+          <p>
+            <%= @article.preview %>
+          </p>
+
+          <img src="http://lorempixel.com/800/300/city/" alt="">
+
+          <p>
+            <% @article.content.split(/\"\,/).each do |text| %>
+            <p><%= text %></p>
+            <% end %>
+          </p>
+      </article>
+    </div>
+
+  </div>
+
+</div>
