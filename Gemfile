@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Enable Markdown text
+gem 'kramdown'
 # Faker
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

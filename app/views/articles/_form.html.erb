@@ -1,4 +1,4 @@
-_form.html.erb
+
 
 <!-- <form>
   <div class="form-group">
@@ -13,15 +13,28 @@ _form.html.erb
   <button type="submit" class="btn btn-primary">Submit</button>
 </form> -->
 
-
-<%= form_for @article do |f| %>
-  <%= f.text_field :title %>
-  <br>
-  <br>
-  <%= f.text_area(:content, size: '70x10') %>
-  <br>
-  <br>
-  <%= f.submit %>
-<% end %>
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <%= form_for @article do |f| %>
+          <%= f.label :title, 'Title' %>
+          <br>
+          <%= f.text_field :title%>
+          <br>
+          <br>
+          <%= f.label :preview, 'Preview' %>
+          <br>
+          <%= f.text_area(:preview, size: '70x5')%>
+          <br>
+          <br>
+          <%= f.label :content, 'Article' %>
+          <br>
+          <%= f.text_area(:content, size: '70x10') %>
+          <br>
+          <br>
+          <%= f.submit %>
+        <% end %>
+    </div>
+  </div>
+</div>
 

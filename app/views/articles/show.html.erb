@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <div class="row">
 
@@ -15,11 +17,9 @@
 
           <img src="http://lorempixel.com/800/300/city/" alt="">
 
-          <p>
-            <% @article.content.split(/\"\,/).each do |text| %>
-            <p><%= text %></p>
-            <% end %>
-          </p>
+
+          <p><%= Kramdown::Document.new(@article.content).to_html.html_safe %></p>
+
       </article>
     </div>
 
